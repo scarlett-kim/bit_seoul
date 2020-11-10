@@ -43,15 +43,20 @@ model.compile(loss='mse', optimizer='adam', metrics=['acc'])
 #눈으로 보는 평가지표는 metrics = accuracy 정확도를 사용하겠다 
 
 #머신을 훈련시킨다 (헬스장가서 훈련.. ㅋㅋfit)
-model.fit(x, y, epochs=100, batch_size=1) #batch_size =1이면 1개씩 잘라서 sport2=100개를 넣겠다 
+#model.fit(x, y, epochs=100, batch_size=1) #batch_size =1이면 1개씩 잘라서 sport2=100개를 넣겠다 
+model.fit(x, y, epochs=100) #batch_size디폴트 값이 32이기 때문에 오류가 없다
 
 # 순서 4. 평가=> 평가가 나오면 결과를 loss와 acc로 반환한다 (수정가능하다 = 하이퍼 파라미터 튜닝)
-loss, acc = model.evaluate(x, y, batch_size=1) 
+#loss, acc = model.evaluate(x, y, batch_size=1) 
+loss, acc = model.evaluate(x, y) #batch_size디폴트 값이 32이기 때문에 오류가 없다
 
 print("loss: ", loss) #0.021037546917796135 loss는 낮추고
 print("acc:" , acc) #0.20000000298023224 acc를 1.0까지 올려라
 
 #머신러닝을 돌리다가 crtl+ c하며 중단된다 
 
+# + 훈련된 것으로 평가했기 때문에  모의고사를 보고 그 다음날 수능문제가 모의고사 문제와 같다면 ? 
+# + accuracy가 정확도가 떨어진다 
+#=> 이 2가지를 업그레이드 하려면 ?  이제부터 2번째 강의에서 시작! 
 
 
