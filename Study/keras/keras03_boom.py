@@ -28,7 +28,6 @@ loss, acc = model.evaluate(x, y)
 print("loss: ", loss) #데이터 개수를 늘렸을 때 0.5이하로 나왔다 0.0008505168370902538
 print("acc:" , acc) #0.10000000149011612
 
-
 #예측 = 훈련시킨 값이 나온다 (accuracy 의 정확도를 위해서 예측이 필요하다)
 y_pred = model.predict(x) #예측값을 y_pred라는 변수에 값을 넣는다 
 print('결과물: \n :' , y_pred) #\n은 다음 줄

@@ -20,9 +20,9 @@ model.add(Dense(1)) # 노드 개수 수정.
 # 순서 3. 컴파일 , 화면 (수정가능하다 = 하이퍼 파라미터 튜닝)
 # model.compile(loss='mse', optimizer='adam', metrics=['acc'])
 #model.compile(loss='mse', optimizer='adam', metrics=['acc']) 
-#ㄴmatrics가 있을 땐, loss,acc값이 나온다 
+#ㄴmetrics가 있을 땐, loss,acc값이 나온다 
 model.compile(loss='mse', optimizer='adam') 
-#ㄴmatrics을 제외하면 loss값만 나옴 
+#ㄴmetrics을 제외하면 loss값만 나옴 
 
 model.fit(x, y, epochs=10000) 
 

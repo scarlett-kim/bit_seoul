@@ -19,14 +19,15 @@ model.add(Dense(1)) # 노드 개수 수정.
 
 # 순서 3. 컴파일 , 화면 (수정가능하다 = 하이퍼 파라미터 튜닝)
 # model.compile(loss='mse', optimizer='adam', metrics=['mse']) loss:  [1.324835466220975e-06, 1.324835466220975e-06]
-# model.compile(loss='mse', optimizer='adam', metrics=['mae']) #mae를 넣으면 loss값을 mae로 판단한다 loss:  [2.3447910280083306e-13, 3.2186508747145126e-07]
+# model.compile(loss='mse', optimizer='adam', metrics=['mae']) #mae를 넣으면 loss값을 mae로 판단한다 
+# loss:  [2.3447910280083306e-13, 3.2186508747145126e-07]
 model.compile(loss='mse', optimizer='adam', metrics=['mae', 'acc']) #첫번째 리스트 mse, 두번째값 mae, 세번째값 acc
 #loss:  [1.940634285213516e-11, 3.910064606316155e-06, 0.10000000149011612]
 
 #model.compile(loss='mse', optimizer='adam', metrics=['acc']) 
-#ㄴmatrics가 있을 땐, loss,acc값이 나온다 
+#ㄴmetrics가 있을 땐, loss,acc값이 나온다 
 # model.compile(loss='mse', optimizer='adam') 
-#ㄴmatrics을 제외하면 loss값만 나옴 
+#ㄴmetrics을 제외하면 loss값만 나옴 
 
 model.fit(x, y, epochs=10000) 
 
